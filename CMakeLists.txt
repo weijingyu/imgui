@@ -5,7 +5,6 @@ project(imgui)
 set(CMAKE_CXX_STANDARD 17)
 
 find_package(PkgConfig REQUIRED)
-find_package(Freetype REQUIRED)
 find_package(OpenGL REQUIRED)
 pkg_search_module(GLFW REQUIRED glfw3)
 
