@@ -25,6 +25,11 @@ ipch
 *.suo
 *.VC.db
 *.VC.VC.opendb
+*.vcxproj
+*.filters
+/bin
+/bin-int
+
 
 ## Commonly used CMake directories
 /build*/
