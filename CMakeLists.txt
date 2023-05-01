@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(PkgConfig REQUIRED)
 find_package(OpenGL REQUIRED)
-pkg_search_module(GLFW REQUIRED glfw3)
+find_package(glfw3 REQUIRED)
+# pkg_search_module(GLFW REQUIRED glfw3)
 
 add_library(imgui STATIC
     imgui.cpp
@@ -27,4 +28,4 @@ target_include_directories(imgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURR
 
 target_link_directories(imgui PUBLIC ${GLFW_LIBRARY_DIRS})
 
-target_link_libraries(imgui PUBLIC glfw3 opengl32.lib)
+target_link_libraries(imgui PUBLIC glfw opengl32.lib)
